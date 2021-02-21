@@ -1,24 +1,44 @@
 # Install-Ubuntu-on-Hyper-V
 
 # Instruction
-Installing Ubuntu on Hyper Visor is pretty straight forward. The only problem is that the VM does not load as fullscreen.  Ill show you step by step on how to do this.
+Cheat Codes
 
+# run remote desktop
+sudo /etc/init.d/xrdp start
 
-# Configure full screen 
-Once you installed Ubuntu
+# shutdown WSL
+wsl --shutdown
 
-== Click on the bottom Left corner button
-type in Terminal to open Terminal
-Start terminal
-Type in:
-sudo nano /etc/default/grub
-enter user password to access the root files
+# to download
+wget -c https://golang.org/dl/go1.16.linux-amd64.tar.gz
+# to checksum file
+shasum -a 256 go1.7.3.linux-amd64.tar.gz
 
-Change the GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash” line to GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash video=hyperv_fb:1920x1080”
-Hold CNRTL, ^, E to exit file
-Click yes
+# extract zipped file
+sudo tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
 
-in termminal 
-type in:
-sudo update-grub
-Restart your VM, enter Full Screen mode and enjoy.
+# setting evironment path
+export PATH=$PATH:/usr/local/go/bin
+
+# Save a File in Vim / Vi #
+The command to save a file in Vim is :w.
+To save the file without exiting the editor, switch back to normal mode by pressing Esc, type :w and hit Enter.
+
+# goto folder and created subfolder
+ cd /home/akhtar/ && mkdir Downloads
+
+# remove folder
+sudo mv /home/xxxxxxx/tendermint/build/tendermint /usr/local/bin/
+
+# cosmos tendermint build
+
+# Environment variables only run once
+echo export GOPATH=\"\$HOME/go\" >> ~/.bash_profile
+echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
+
+# Store Environment variables in windows
+source ~/.bash_profile
+after running command below.. move the binary to shared/root folder
+make install
+# Once youve build the project.. the binary must be moved to a generic folder
+sudo mv /home/akhtar/tendermint/build/tendermint /usr/local/bin/
