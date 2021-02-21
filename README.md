@@ -50,6 +50,13 @@ make install
 
 sudo mv /home/akhtar/tendermint/build/tendermint /usr/local/bin/
 
+# run the tendermint binary
+rm -rf ~/.tendermint
+
+tendermint init
+
+tendermint node --proxy-app=kvstore
+
 # Check Netstats to see SPID blocking port
 sudo netstat -ltnp | grep ':26656'
 
