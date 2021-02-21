@@ -45,7 +45,9 @@ sudo mv /home/akhtar/tendermint/build/tendermint /usr/local/bin/
 
 # Check Netstats to see SPID blocking port
 sudo netstat -ltnp | grep ':26656'
- "tcp6       0      0 :::26656                :::*                    LISTEN      14099/tendermint   "
+
+"tcp6       0      0 :::26656                :::*                    LISTEN      14099/tendermint   "
+
 Kill 14099
 
 
