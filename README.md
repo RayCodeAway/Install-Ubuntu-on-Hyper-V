@@ -70,4 +70,7 @@ curl https://get.starport.network/starport@v0.13.1 | bash
 # move starpot binary to local/root
 sudo mv /home/akhtar/starport /usr/local/bin/
 
-
+# vscode in WSL 
+setup github
+  git config --global user.email "akhtar.miah@hotmail.com"
+  git config --global user.name "coderayway"
