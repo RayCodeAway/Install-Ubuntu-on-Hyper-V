@@ -42,3 +42,10 @@ after running command below.. move the binary to shared/root folder
 make install
 # Once youve build the project.. the binary must be moved to a generic folder
 sudo mv /home/akhtar/tendermint/build/tendermint /usr/local/bin/
+
+# Check Netstats to see SPID blocking port
+sudo netstat -ltnp | grep ':26656'
+ "tcp6       0      0 :::26656                :::*                    LISTEN      14099/tendermint   "
+Kill 14099
+
+
