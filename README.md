@@ -15,7 +15,7 @@ wget -c https://golang.org/dl/go1.16.linux-amd64.tar.gz
 shasum -a 256 go1.7.3.linux-amd64.tar.gz
 
 # extract zipped file
-sudo tar -C /usr/local -xvzf go1.15.2.linux-amd64.tar.gz
+sudo tar -C /usr/local -xvzf go1.16.linux-amd64.tar.gz
 
 # setting evironment path
 export PATH=$PATH:/usr/local/go/bin
