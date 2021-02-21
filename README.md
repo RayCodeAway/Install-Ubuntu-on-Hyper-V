@@ -22,6 +22,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 # Save a File in Vim / Vi #
 The command to save a file in Vim is :w.
+
 To save the file without exiting the editor, switch back to normal mode by pressing Esc, type :w and hit Enter.
 
 # goto folder and created subfolder
@@ -34,13 +35,19 @@ sudo mv /home/xxxxxxx/tendermint/build/tendermint /usr/local/bin/
 
 # Environment variables only run once
 echo export GOPATH=\"\$HOME/go\" >> ~/.bash_profile
+
 echo export PATH=\"\$PATH:\$GOPATH/bin\" >> ~/.bash_profile
 
-# Store Environment variables in windows
+# SET Environment variables in windows
 source ~/.bash_profile
+source ~/.profile
+
 after running command below.. move the binary to shared/root folder
+
 make install
+
 # Once youve build the project.. the binary must be moved to a generic folder
+
 sudo mv /home/akhtar/tendermint/build/tendermint /usr/local/bin/
 
 # Check Netstats to see SPID blocking port
