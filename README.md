@@ -64,4 +64,10 @@ sudo netstat -ltnp | grep ':26656'
 
 Kill 14099
 
+# run starport
+curl https://get.starport.network/starport@v0.13.1 | bash
+
+# move starpot binary to local/root
+sudo mv /home/akhtar/starport /usr/local/bin/
+
 
