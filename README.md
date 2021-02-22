@@ -62,6 +62,11 @@ sudo netstat -ltnp | grep ':26656'
 
 Kill 14099
 
+# Kill thread
+ps aux
+
+kill <pid>
+
 # run starport
 curl https://get.starport.network/starport@v0.13.1 | bash
 
