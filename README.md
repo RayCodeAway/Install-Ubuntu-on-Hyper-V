@@ -1,7 +1,5 @@
-# Install-Ubuntu-on-Hyper-V
+# Install Ubuntu WSL For Cosmos
 
-# Instruction
-Cheat Codes
 
 # run remote desktop
 sudo /etc/init.d/xrdp start
